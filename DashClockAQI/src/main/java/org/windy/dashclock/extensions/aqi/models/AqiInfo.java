@@ -5,9 +5,9 @@ import com.google.gson.annotations.SerializedName;
 public class AqiInfo {
     private int aqi;
     private String area;
-    private int co;
+    private float co;
     @SerializedName("co_24h")
-    private int co24h;
+    private float co24h;
     private int no2;
     @SerializedName("no2_24h")
     private int no224h;
@@ -46,11 +46,11 @@ public class AqiInfo {
         return area;
     }
 
-    public int getCO() {
+    public float getCO() {
         return co;
     }
 
-    public int getCOAverage() {
+    public float getCOAverage() {
         return co24h;
     }
 

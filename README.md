@@ -7,3 +7,5 @@ This plugin track serveal Air Quality Indcies, aka AQIs, for the cities/towns in
 
 The AQI data is published by the Chinese of this plug-in is provided by the [PM25.in](http://pm25.in/).
 
+![image](doc/screenshot.png)
+
