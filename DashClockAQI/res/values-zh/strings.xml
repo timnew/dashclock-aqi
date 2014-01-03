@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dash Clock 空气质量</string>
+    <string name="title">空气质量指标</string>
+    <string name="description">显示PM2.5等空气质量指标</string>
+    <string name="io_exception">无法连接到服务器</string>
+    <string name="api_rate_exceeded_exception">服务器过载</string>
+
+    <string name="item_aqi">AQI: %d\n</string>
+    <string name="item_pm25">PM2.5: %d\n</string>
+    <string name="item_primary_pollutant">主要污染物: %s\n</string>
+    <string name="item_quality">空气质量: %s\n</string>
+</resources>

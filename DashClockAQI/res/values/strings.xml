@@ -1,6 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-	<string name="app_name">Dash Clock AQI</string>
+    <string name="app_name">Dash Clock AQI</string>
     <string name="title">AQI</string>
-    <string name="description">Turn on/off flashlight in the extension</string>
+    <string name="description">Display PM 2.5 information</string>
+    <string name="io_exception">Update AQI failed due to network issue</string>
+    <string name="api_rate_exceeded_exception">API call rate is exceeded</string>
+
+    <string name="item_aqi">AQI: %d\n</string>
+    <string name="item_pm25">PM2.5: %d\n</string>
+    <string name="item_primary_pollutant">Primary Pollutant: %s\n</string>
+    <string name="item_quality">Quality: %s\n</string>
 </resources>
