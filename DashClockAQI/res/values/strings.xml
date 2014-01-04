@@ -3,11 +3,28 @@
     <string name="app_name">Dash Clock AQI</string>
     <string name="title">AQI</string>
     <string name="description">Display PM 2.5 information</string>
+    <string name="settings">Settings</string>
+
     <string name="io_exception">Update AQI failed due to network issue</string>
     <string name="api_rate_exceeded_exception">API call rate is exceeded</string>
+    <string name="failed_to_load_city_list_exception">Failed to load city list</string>
+    <string name="failed_to_load_stations_list_exception">Failed to load station list</string>
+    <string name="invalid_api_key_exception">API Key is invalid</string>
 
     <string name="item_aqi">AQI: %d\n</string>
     <string name="item_pm25">PM2.5: %d\n</string>
     <string name="item_primary_pollutant">Primary Pollutant: %s\n</string>
     <string name="item_quality">Quality: %s\n</string>
+
+    <string name="data_not_available">Data Not Available</string>
+
+    <string name="settings_city">City Name</string>
+    <string name="settings_city_summary">City that the widget monitors</string>
+
+    <string name="settings_stations">Stations</string>
+    <string name="settings_stations_summary">Stations of the city</string>
+
+    <string name="settings_api_key">API Key</string>
+    <string name="settings_api_key_summary">API Key is the token used to query the server</string>
+
 </resources>

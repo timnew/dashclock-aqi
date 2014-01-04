@@ -35,7 +35,15 @@
             <meta-data
                 android:name="description"
                 android:value="@string/description" />
+
+            <meta-data
+                android:name="settingsActivity"
+                android:value=".settings.SettingsActivity_" />
         </service>
 
+        <activity
+            android:name=".settings.SettingsActivity_"
+            android:label="@string/settings"
+            android:exported="true" />
     </application>
 </manifest>

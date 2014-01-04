@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.windy.dashclock.extensions.aqi.DashClockAQITestRunner;
 import org.windy.dashclock.extensions.aqi.models.AqiInfoList;
+import org.windy.dashclock.extensions.aqi.models.CityList;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 
@@ -24,11 +25,19 @@ public class AqiServiceTest {
     }
 
     @Test
-    public void should_load() {
-        ResponseEntity<AqiInfoList> beijing = service.aqi("beijing");
+    public void should_load_aqi() {
+        ResponseEntity<AqiInfoList> response = service.aqi("beijing");
 
-        assertThat(beijing.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(beijing.getBody()).isNotEmpty();
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody()).isNotEmpty();
+    }
+
+    @Test
+    public void should_load_cities() {
+        ResponseEntity<CityList> response = service.aqiCities();
+
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody().getCities()).hasSize(190);
     }
 
     @Test

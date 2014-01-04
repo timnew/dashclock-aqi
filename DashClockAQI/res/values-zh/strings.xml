@@ -3,11 +3,27 @@
     <string name="app_name">Dash Clock 空气质量</string>
     <string name="title">空气质量指标</string>
     <string name="description">显示PM2.5等空气质量指标</string>
+    <string name="settings">配置</string>
+
     <string name="io_exception">无法连接到服务器</string>
     <string name="api_rate_exceeded_exception">服务器过载</string>
+    <string name="failed_to_load_city_list_exception">无法加载城市列表</string>
+    <string name="failed_to_load_stations_list_exception">无法加载检测点列表</string>
+    <string name="invalid_api_key_exception">无效的API Key</string>
 
     <string name="item_aqi">AQI: %d\n</string>
     <string name="item_pm25">PM2.5: %d\n</string>
     <string name="item_primary_pollutant">主要污染物: %s\n</string>
     <string name="item_quality">空气质量: %s\n</string>
+
+    <string name="data_not_available">数据不可用</string>
+
+    <string name="settings_city">城市名</string>
+    <string name="settings_city_summary">所需要关注的城市</string>
+
+    <string name="settings_stations">检测点</string>
+    <string name="settings_stations_summary">城市里所关注的检测点</string>
+
+    <string name="settings_api_key">API Key</string>
+    <string name="settings_api_key_summary">API Key是用来访问服务器的认证标示</string>
 </resources>

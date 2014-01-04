@@ -12,19 +12,15 @@ import org.windy.dashclock.extensions.aqi.models.CityStationInfo;
 
 @Rest(rootUrl = "http://www.pm25.in/api", converters = {GsonHttpMessageConverter.class})
 public interface AqiRestInterface {
-
     RestTemplate getRestTemplate();
 
-    @Get("/querys/aqi_details.json?city={city}")
-    public ResponseEntity<AqiInfoList> aqi(String city);
+    @Get("/querys/aqi_details.json?city={city}&stations={stations}&avg={avg}")
+    public ResponseEntity<AqiInfoList> aqi(String city, String stations, String avg);
 
     @Get("/querys/station_names.json?city={city}")
-    public ResponseEntity<CityStationInfo> queryStationInfo(String city);
+    public ResponseEntity<CityStationInfo> stations(String city);
 
     @Get("/querys.json")
     public ResponseEntity<CityList> aqiCities();
 }
-
-
-
 

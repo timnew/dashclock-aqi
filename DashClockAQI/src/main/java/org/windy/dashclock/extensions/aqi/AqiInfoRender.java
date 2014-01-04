@@ -5,10 +5,13 @@ import android.content.Context;
 import com.google.android.apps.dashclock.api.ExtensionData;
 import com.googlecode.androidannotations.annotations.EBean;
 import com.googlecode.androidannotations.annotations.RootContext;
+import com.googlecode.androidannotations.annotations.sharedpreferences.Pref;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.windy.dashclock.extensions.aqi.models.AqiInfo;
 import org.windy.dashclock.extensions.aqi.models.AqiInfoList;
+import org.windy.dashclock.extensions.aqi.settings.Settings_;
 
 import java.util.List;
 
@@ -20,10 +23,23 @@ public class AqiInfoRender {
 
     private List<AqiInfo> aqiInfos;
 
+    @Pref
+    protected Settings_ settings;
+
     @RootContext
     protected Context context;
 
     public ExtensionData render(ResponseEntity<AqiInfoList> aqi) {
+        if (aqi.getStatusCode() != HttpStatus.OK) {
+            return new ExtensionData()
+                    .visible(true)
+                    .icon(R.drawable.ic_leaf)
+                    .expandedTitle(settings.cityName().get())
+                    .expandedBody(context.getString(R.string.data_not_available))
+                    .status(context.getString(R.string.data_not_available));
+
+        }
+
         aqiInfos = aqi.getBody();
 
         return new ExtensionData()
