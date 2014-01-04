@@ -1,3 +1,7 @@
+<!--
+  ~ Copyright (c) 2014. TimNew (http://github.com/timnew)
+  -->
+
 <resources>
 
     <style name="AppTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar" />

@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2014. TimNew (http://github.com/timnew)
+  -->
+
 <resources>
     <string-array name="default_cities">
         <item>三亚</item>
